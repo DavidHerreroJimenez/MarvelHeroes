@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/adapter_heroes_list_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/imageview_hero_detail_height"
+            android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/fragment_hero_detail_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/adapter_heroes_list_padding_start_textviews"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/adapter_hero_detail_textview_name"
+                android:layout_width="match_parent"
+                android:layout_gravity="top|start"
+                android:gravity="top|start"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="bold"
+                android:textSize="@dimen/adapter_heroes_list_font_size_title"/>
+
+            <TextView
+                android:id="@+id/adapter_hero_detail_textview_description"
+                android:layout_gravity="top|start"
+                android:gravity="top|start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_light"
+                android:textStyle="normal"
+                android:textSize="@dimen/adapter_heroes_list_font_size_description"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_hero_detail_links_title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/fragment_hero_detail_detail_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/fragment_hero_detail_detail_title"/>
+
+            <Button
+                android:id="@+id/fragment_hero_detail_wiki_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/fragment_hero_detail_wiki_title"/>
+
+            <Button
+                android:id="@+id/fragment_hero_detail_comics_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/fragment_hero_detail_comics_title"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_hero_detail_resources_title" />
+
+        <TabHost
+            android:id="@+id/fragment_hero_detail_tabhost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    </TabWidget>
+
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/fragment_hero_detail_tabhost_tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/fragment_hero_detail_tabhost_tab1_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorBackgroundList" />
+
+                        <TextView
+                            android:id="@+id/fragment_hero_detail_tabhost_tab1_textview_empty_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:text="@string/fragment_heroes_list_textview_empty_list"
+                            android:textColor="@android:color/darker_gray"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fragment_hero_detail_tabhost_tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/fragment_hero_detail_tabhost_tab2_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorBackgroundList" />
+
+                        <TextView
+                            android:id="@+id/fragment_hero_detail_tabhost_tab2_textview_empty_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:text="@string/fragment_heroes_list_textview_empty_list"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

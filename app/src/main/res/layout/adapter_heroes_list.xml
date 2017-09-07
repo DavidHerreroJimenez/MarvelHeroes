@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/adapter_heroes_list_linearlayout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/adapter_heroes_list_height"
+    android:padding="@dimen/adapter_heroes_list_padding"
+    android:layout_marginBottom="@dimen/adapter_heroes_list_margin"
+    android:background="@android:color/white"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/imageview_heroes_list_width"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/adapter_heroes_list_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/adapter_heroes_list_padding_start_textviews"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/adapter_heroes_list_textview_name"
+            android:layout_width="match_parent"
+            android:layout_gravity="top|start"
+            android:gravity="top|start"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            android:textSize="@dimen/adapter_heroes_list_font_size_title"/>
+
+        <TextView
+            android:id="@+id/adapter_heroes_list_textview_description"
+            android:layout_gravity="top|start"
+            android:gravity="top|start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_light"
+            android:textStyle="normal"
+            android:textSize="@dimen/adapter_heroes_list_font_size_description"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

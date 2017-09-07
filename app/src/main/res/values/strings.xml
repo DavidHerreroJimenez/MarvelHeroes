@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Marvel Heroes</string>
+
+
+    <!-- Fragment heroes list -->
+    <string name="activity_heroeslist_title">Find your Super-Hero</string>
+    <string name="fragment_heroes_list_edittext_hint_text">Name to find</string>
+    <string name="fragment_heroes_list_textview_empty_list">Nothing to show</string>
+    <string name="fragment_heroes_list_dialog_title">Characters</string>
+    <string name="fragment_heroes_list_dialog_description">Downloading characters</string>
+
+    <!--Fragment hero detail -->
+    <string name="fragment_hero_detail_links_title">Links</string>
+    <string name="fragment_hero_detail_detail_title">Detail</string>
+    <string name="fragment_hero_detail_wiki_title">Wiki</string>
+    <string name="fragment_hero_detail_comics_title">Comics</string>
+    <string name="fragment_hero_detail_resources_title">Resources</string>
+    <string name="fragment_hero_detail_events_title">Events</string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

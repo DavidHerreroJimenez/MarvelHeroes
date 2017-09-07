@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <EditText
+        android:id="@+id/fragment_heroes_list_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:minHeight="@dimen/edittext_height"
+        android:hint="@string/fragment_heroes_list_edittext_hint_text"
+        android:textColorHint="@color/colorAccent"/>
+
+    <LinearLayout
+        android:id="@+id/fragment_heroes_list_linearlayout_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_heroes_list__linearlayout_reciclerview_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackgroundList"/>
+
+        <TextView
+            android:id="@+id/fragment_heroes_list__linearlayout_textview_empty_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/fragment_heroes_list_textview_empty_list"
+            android:textColor="@android:color/darker_gray"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
